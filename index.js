@@ -1,3 +1,3 @@
 'use strict';
-const ServiceTestHelper = require('./libs/serviceTestHelpers.js');
+const ServiceTestHelper = require('./libs/serviceTestHelper.js');
 module.exports.ServiceTestHelper = ServiceTestHelper;
