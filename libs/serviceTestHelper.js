@@ -1,6 +1,6 @@
 'use strict';
-import startTestService from 'discovery-test-tools';
-import Promise from 'promise';
+const Promise = require('promise');
+const startTestService = require('discovery-test-tools').startTestService;
 
 class ServiceTestHelper {
   startTestService(name, options) {
