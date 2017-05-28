@@ -10,9 +10,12 @@
     "rimraf": "^2.6.1",
     "discovery-test-tools": "https://github.com/monsterstack/discovery-test-tools#development"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1"
+  },
   "scripts": {
-    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files --presets react,es2015,stage-2",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
