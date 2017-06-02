@@ -15,13 +15,11 @@ class ServiceTestHelper {
 }
 
 const Assert = {
-  assertFieldExists: (field, obj, message, done) => {
+  assertFieldExists: (field, obj, message) => {
     if (obj[field] === undefined) {
       if (message === undefined) message = '';
-      done(new Error(message));
-    } else {
-      done();
-    }
+      throw new Error(message);
+    } 
     return;
   }
 }
