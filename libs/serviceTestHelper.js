@@ -22,6 +22,7 @@ const Assert = {
     } else {
       done();
     }
+    return;
   }
 }
 
