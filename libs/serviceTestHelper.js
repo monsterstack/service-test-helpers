@@ -14,4 +14,16 @@ class ServiceTestHelper {
   }
 }
 
+const Assert = {
+  assertFieldExists: (field, obj, message, done) => {
+    if (obj[field] === undefined) {
+      if (message === undefined) message = '';
+      done(new Error(message));
+    } else {
+      done();
+    }
+  }
+}
+
 module.exports.ServiceTestHelper = ServiceTestHelper;
+module.exports.Assert = Assert;
