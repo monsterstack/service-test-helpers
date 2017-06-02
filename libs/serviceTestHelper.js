@@ -21,6 +21,15 @@ const Assert = {
       throw new Error(message);
     } 
     return;
+  },
+
+  assertEquals: (actual, expected, message) => {
+    if (actual === expected) {
+      return;
+    } else {
+      if (message === undefined) message = '';
+      throw new Error(message);
+    }
   }
 }
 
