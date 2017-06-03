@@ -26,7 +26,7 @@ class ServiceTestHelper {
   }
 
   bindToGenericService(listeningPort) {
-    let service = newMinimalGenericServiceDescriptor(listeningPort);
+    let service = this.newMinimalGenericServiceDescriptor(listeningPort);
     let apiBinding = new ApiBinding(service);
     return apiBinding.bind();
   }
