@@ -3,4 +3,5 @@ const ServiceTestHelper = require('./libs/serviceTestHelper.js').ServiceTestHelp
 const Assert = require('./libs/serviceTestHelper.js').Assert;
 
 module.exports.ServiceTestHelper = ServiceTestHelper;
+module.exports.TokenTestHelper = TokenTestHelper;
 module.exports.Assert = Assert;
