@@ -8,6 +8,7 @@
     "babel-preset-es2015": "^6.24.1",
     "promise": "^7.1.1",
     "rimraf": "^2.6.1",
+    "jsonwebtoken": "latest",
     "discovery-test-tools": "https://github.com/monsterstack/discovery-test-tools#development"
   },
   "devDependencies": {
