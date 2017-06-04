@@ -13,3 +13,5 @@ class TokenTestHelper {
 		return p;
 	}
 }
+
+module.exports.TokenTestHelper = TokenTestHelper;
