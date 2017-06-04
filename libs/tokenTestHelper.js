@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 class TokenTestHelper {
 	decodeSecret(key, apiSecret) {
-		return jwt.verify(key, apiSecret);
+		return jwt.verify(apiSecret, key);
 	}
 }
 
