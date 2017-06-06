@@ -49,6 +49,15 @@ const Assert = {
       if (message === undefined) message = '';
       throw new Error(message);
     }
+  },
+
+  assertNotEquals: (actual, expected, message) => {
+    if (actual !== expected) {
+      return;
+    } else {
+      if (message === undefined) message = '';
+      throw new Error(message);
+    }
   }
 }
 
