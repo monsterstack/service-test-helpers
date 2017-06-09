@@ -8,10 +8,7 @@ class TokenTestHelper {
 	}
 
 	codeSecret(tenant) {
-		return jwt.sign({
-			id: tenant.id,
-			name: tenant.name
-		}, tenant.apiKey);
+		return jwt.sign(tenant, tenant.apiKey);
 	}
 }
 
