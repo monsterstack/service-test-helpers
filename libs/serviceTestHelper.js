@@ -7,6 +7,13 @@ const startTestService = require('discovery-test-tools').startTestService;
 
 class ServiceTestHelper {
   startTestService(name, options) {
+    if(name === undefined)
+      throw new Error('Missing Service name');
+    
+    if(options === undefined) {
+      options = {};
+    }
+    
     let p = new Promise((resolve, reject) => {
       startTestService(name, options, (error, server) => {
         resolve(server);
