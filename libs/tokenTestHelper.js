@@ -7,8 +7,26 @@ class TokenTestHelper {
 		return jwt.verify(apiSecret, key);
 	}
 
-	codeSecret(tenant) {
-		return jwt.sign(tenant, tenant.apiKey);
+	codeTenantSecret(tenant) {
+		var token = jwt.sign({
+    	auth:  'magic',
+    	agent: 'x-cdsp-tenant',
+			scope: 'Tenant',
+			name: tenant.name,
+    	exp:   Math.floor(new Date().getTime()/1000) + 7*24*60*60 // Note: in seconds!
+  	}, tenant.apiKey);  // secret is defined in the environment variable JWT_SECRET
+  	return token;
+	}
+
+	codeApplicationSecret(application) {
+		var token = jwt.sign({
+    	auth:  'magic',
+    	agent: 'x-cdsp-tenant',
+			scope: 'Application',
+			name: application.name,
+    	exp:   Math.floor(new Date().getTime()/1000) + 7*24*60*60 // Note: in seconds!
+  	}, application.apiKey);  // secret is defined in the environment variable JWT_SECRET
+  	return token;
 	}
 }
 
