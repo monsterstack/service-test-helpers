@@ -21,7 +21,7 @@ class TokenTestHelper {
 	codeApplicationSecret(application) {
 		var token = jwt.sign({
     	auth:  'magic',
-    	agent: 'x-cdsp-tenant',
+    	agent: 'x-cdsp-application',
 			scope: 'Application',
 			name: application.name,
     	exp:   Math.floor(new Date().getTime()/1000) + 7*24*60*60 // Note: in seconds!
